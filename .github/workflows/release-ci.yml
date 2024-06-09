@@ -52,7 +52,7 @@ jobs:
       - name: Build Windows Target
         run: |
           cmake -G "Visual Studio 16 2019" -A x64 -DBoost_USE_STATIC_LIBS=ON -DBoost_USE_STATIC_RUNTIME=ON ..
-          cmake --build . --config Release
+          MSBuild kryptokrona.sln /p:Configuration=Release /p:PlatformToolset=v141
         working-directory: build
 
       - name: Upload Windows Artifact
