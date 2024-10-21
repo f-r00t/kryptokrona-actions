@@ -346,7 +346,7 @@ std::tuple<Error, std::shared_ptr<WalletBackend>> WalletBackend::createWallet(
 
     /* Derive the view key from the spend key */
     cryptonote::AccountBase::generateViewFromSpend(
-        spendKey.secretKey, privateViewKey, publicViewKey);
+        spendKey.secretKey, privateViewKey);
 
     /* Just defining here so it's more obvious what we're doing in the
        constructor */
